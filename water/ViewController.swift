@@ -13,8 +13,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorize()
-        createNotifications()
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Startup")
+        } else {
+            print("First Launch")
+            authorize()
+            createNotifications()
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,19 +39,23 @@ class ViewController: UIViewController {
     
     func createNotifications() {
         let content = UNMutableNotificationContent()
-        content.title = NSString.localizedUserNotificationString(forKey: "Drink Water!", arguments: nil)
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        content.title = NSString.localizedUserNotificationString(forKey: "Drik et glas vand.", arguments: nil)
         //content.body = NSString.localizedUserNotificationString(forKey: "Nu!", arguments: nil)
         
-        for index in 9...14 {
-            var date = DateComponents()
-            date.hour = index
-            date.minute = 00
-            let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-            let request = UNNotificationRequest(identifier: String(index), content: content, trigger: trigger)
-            let center = UNUserNotificationCenter.current()
-            center.add(request) { (error: Error?) in
-                if let theError = error {
-                    print(theError.localizedDescription)
+        for day in 2...6 {
+            for hourUnit in 9...14 {
+                var date = DateComponents()
+                date.weekday = day;
+                date.hour = hourUnit
+                date.minute = 00
+                let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+                let request = UNNotificationRequest(identifier: String(day + hourUnit), content: content, trigger: trigger)
+                center.add(request) { (error: Error?) in
+                    if let theError = error {
+                        print(theError.localizedDescription)
+                    }
                 }
             }
         }

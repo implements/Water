@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Mxv-Mr-Nns">
-                                <rect key="frame" x="-346" y="0.0" width="973" height="804"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water-2176787_1920.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XYg-AJ-0xB">
+                                <rect key="frame" x="0.0" y="0.0" width="427" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -29,10 +29,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+            <point key="canvasLocation" x="31.199999999999999" y="31.03448275862069"/>
         </scene>
     </scenes>
     <resources>
-        <image name="background.jpg" width="3000" height="2143"/>
+        <image name="water-2176787_1920.jpg" width="1236" height="1920"/>
     </resources>
 </document>

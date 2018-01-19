@@ -13,7 +13,7 @@
 		4B096C2B201105B20091DBAE /* water.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B096C29201105B20091DBAE /* water.xcdatamodeld */; };
 		4B096C2D201105B20091DBAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B096C2C201105B20091DBAE /* Assets.xcassets */; };
 		4B096C30201105B20091DBAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B096C2E201105B20091DBAE /* LaunchScreen.storyboard */; };
-		4B096C4720110E3F0091DBAE /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B096C4620110E3F0091DBAE /* background.jpg */; };
+		4B738FF120127FB000906533 /* water-2176787_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B738FF020127FAF00906533 /* water-2176787_1920.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 		4B096C2F201105B20091DBAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B096C31201105B20091DBAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B096C36201105B20091DBAE /* waterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B096C4620110E3F0091DBAE /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../../../Downloads/background.jpg; sourceTree = "<group>"; };
+		4B738FF020127FAF00906533 /* water-2176787_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "water-2176787_1920.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 		4B096C4520110E120091DBAE /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				4B096C4620110E3F0091DBAE /* background.jpg */,
+				4B738FF020127FAF00906533 /* water-2176787_1920.jpg */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -181,8 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B096C30201105B20091DBAE /* LaunchScreen.storyboard in Resources */,
-				4B096C4720110E3F0091DBAE /* background.jpg in Resources */,
 				4B096C2D201105B20091DBAE /* Assets.xcassets in Resources */,
+				4B738FF120127FB000906533 /* water-2176787_1920.jpg in Resources */,
 				4B096C28201105B20091DBAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

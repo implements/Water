@@ -2,6 +2,8 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var activationSwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,8 +16,9 @@ class ViewController: UIViewController {
                 print(request)
             }
         })
+        activationSwitch.addTarget(self, action: #selector(toggleSwitch(_:)), for: UIControlEvents.valueChanged)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,6 +37,17 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func toggleSwitch(_ sender: UISwitch) {
+        if activationSwitch.isOn {
+            print("On")
+            createNotifications()
+        } else {
+            print("Off")
+            let center = UNUserNotificationCenter.current()
+            center.removeAllPendingNotificationRequests()
+        }
+    }
+    
     func createNotifications() {
         
         let content = UNMutableNotificationContent()
@@ -43,7 +57,7 @@ class ViewController: UIViewController {
         content.title = NSString.localizedUserNotificationString(forKey: "Drik et glas vand.", arguments: nil)
         
         for day in 2...6 {
-            for hour in 9...14 {
+            for hour in 9...14 where hour != 12 {
                 var date = DateComponents()
                 date.weekday = day
                 date.hour = hour
